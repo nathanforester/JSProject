@@ -4,7 +4,7 @@ function rpsGame (yourChoice) {
     botChoice = numberSelect(randRPSInt()); //was bot choice
     results = decideWinner(humanChoice, botChoice); //was bot choice
     message = finalMessage(results);
-    rpsFontEnd(yourChoice.id, computerChoice, message); //was bot choice
+    rpsFrontEnd(yourChoice.id, botChoice, message); //was bot choice
 }
 function randRPSInt () {
     return Math.floor(Math.random() * 3); // eliminate floats  
@@ -38,7 +38,7 @@ function finalMessage ([yourScore]) {
     }
 }
 
-function rpsFrontEnd(humanImageChoice, botImageChoice, finalMessage) {
+function rpsFrontEnd (humanImageChoice, botImageChoice, finalMessage) {
     var imgData = {
         'rock': document.getElementById('rock').src,
         'paper': document.getElementById('paper').src,
@@ -61,5 +61,7 @@ function rpsFrontEnd(humanImageChoice, botImageChoice, finalMessage) {
     document.getElementById('flex-box-rps-div').appendChild(humanDiv);
     document.getElementById('flex-box-rps-div').appendChild(botDiv);
     document.getElementById('flex-box-rps-div').appendChild(messageDiv);
+
+    
 
 }
