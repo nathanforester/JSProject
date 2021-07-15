@@ -1,3 +1,4 @@
+ 
 function Age () {
 var BirthYear = prompt("Please enter your date of birth: ");
 var cDate = new Date();
@@ -16,4 +17,5 @@ document.getElementById('flex-box-result').appendChild(h1);
 function reset() {
     document.getElementById('Age').remove();
 }
+
 
